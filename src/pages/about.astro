@@ -1,16 +1,8 @@
 ---
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 
-const pageTitle = "About Me";
-const identity = {
-  firstName: "Edward",
-  country: "Australia",
-  occupation: "programmer",
-  hobbies: ["gaming", "swimming", "soccer"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "agile"];
-const skillColor = "navy";
+const pageTitle = "About me";
 ---
 
 <html lang="en">
@@ -20,40 +12,8 @@ const skillColor = "navy";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style define:vars={{ skillColor }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: bold;
-      }
-    </style>
   </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>
-        I live in {identity.country} and I work as a {identity.occupation}.
-      </li>
-      {
-        identity.hobbies.length >= 2 && (
-          <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
-          </li>
-        )
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
+  <body class="dark:bg-slate-900 dark:text-slate-400">
+    <Header page="about" />
   </body>
 </html>

@@ -1,3 +1,7 @@
+---
+const { page } = Astro.props;
+---
+
 <header>
   <p class="mt-10 font-mono tracking-wider text-center lg:text-3xl">
     GREAT THINGS COME FROM SMALL BEGINNINGS
@@ -12,19 +16,42 @@
       <ul
         class="flex mx-auto font-normal border-x-1 dark:border-slate-100 divide-x divide-slate-700 border-x border-slate-700 lg:shrink-0 dark:divide-slate-100"
       >
-        <li class="h-12 w-44 hover:text-purple-500 text-purple-500">
+        <li
+          class:list={[
+            "h-12",
+            "w-44",
+            "hover:text-purple-500",
+            { "text-purple-500": page == "home" },
+          ]}
+        >
           <a href="/" class="flex items-center justify-center h-full">Home</a>
         </li>
-        <li class="h-12 w-44 hover:text-purple-500 text-purple-500">
-          <a href="/" class="flex items-center justify-center h-full">About</a>
+        <li
+          class:list={[
+            "h-12",
+            "w-44",
+            "hover:text-purple-500",
+            { "text-purple-500": page == "about" },
+          ]}
+        >
+          <a href="/about" class="flex items-center justify-center h-full"
+            >About</a
+          >
         </li>
-        <li class="h-12 w-44 hover:text-purple-500 text-purple-500">
+        <li
+          class:list={[
+            "h-12",
+            "w-44",
+            "hover:text-purple-500",
+            { "text-purple-500": page == "blog" },
+          ]}
+        >
           <a class="flex items-center justify-center h-full" href="/posts"
             >My Blog</a
           >
         </li>
         <li class="h-12 w-44 hover:text-purple-500">
-          <a class="flex items-center justify-center h-full" href="/posts"
+          <a class="flex items-center justify-center h-full" href="/blogs"
             >Our Team</a
           >
         </li>
