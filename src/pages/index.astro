@@ -15,7 +15,32 @@ const pageTitle = "Edward Zhou";
   </head>
   <body class="dark:bg-slate-900 dark:text-slate-400">
     <Header page="home" />
-    <p class="hamburger">test javascript</p>
+    <!-- featured blog section -->
+    <section
+      class="relative w-11/12 mx-auto border lg:w-1/2 image border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
+    >
+      <span class="feature_blog_tag">FEATURED POST</span>
+      <img src="feature_blog.png" alt="" />
+      <section class="py-8 pl-8 pr-20">
+        <div class="text-sm text-slate-700 dark:text-slate-400">
+          <time class="mr-1">Nov 9, 2021</time>
+          <span
+            class="mr-1 relative bottom-0.5 inline-block w-0.5 h-0.5 rounded-full bg-slate-400 dark:bg-slate-400"
+          ></span>
+          <span>2 min</span>
+        </div>
+        <div class="hover:text-purple-500">
+          <h1 class="mt-6 text-3xl hover:text-purple-500">
+            Everything about books: what I'm reading during X-mas leave
+          </h1>
+          <p class="mt-4 text-slate-700 dark:text-slate-500">
+            Create a blog post subtitle that summarizes your post in a few
+            short, punchy sentences and entices your audience to continue
+            reading....
+          </p>
+        </div>
+      </section>
+    </section>
   </body>
   <script>
     import "../scripts/menu.js";
