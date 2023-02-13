@@ -5,37 +5,30 @@ import SubscribeEmail from "../components/home/SubscribeEmail.astro";
 import Blogs from "../components/home/Blogs.astro";
 import AboutMe from "../components/home/AboutMe.astro";
 import Footer from "../components/Footer.astro";
+
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 const pageTitle = "Edward Zhou";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body class="dark:bg-slate-900 dark:text-slate-400">
-    <Header page="home" />
-    <!-- featured blog section -->
-    <FeatureBlog />
-    <!-- Subscribe email section -->
-    <SubscribeEmail />
-    <!-- blogs and about me section -->
-    <section
-      class="w-11/12 py-8 mx-auto border-b border-slate-700 dark:border-slate-100 lg:grid lg:grid-cols-3"
-    >
-      <!-- blogs -->
-      <Blogs />
-      <!-- about me -->
-      <AboutMe />
-    </section>
-    <Footer />
-  </body>
+<Layout title={pageTitle}>
+  <Header page="home" />
+  <!-- featured blog section -->
+  <FeatureBlog />
+  <!-- Subscribe email section -->
+  <SubscribeEmail />
+  <!-- blogs and about me section -->
+  <section
+    class="w-11/12 py-8 mx-auto border-b border-slate-700 dark:border-slate-100 lg:grid lg:grid-cols-3"
+  >
+    <!-- blogs -->
+    <Blogs />
+    <!-- about me -->
+    <AboutMe />
+  </section>
+  <Footer />
   <script>
     import "../scripts/menu.js";
   </script>
-</html>
+</Layout>
