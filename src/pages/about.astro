@@ -9,10 +9,10 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 const pageTitle = "About me";
+const pageTab = "about";
 ---
 
-<Layout title={pageTitle}>
-  <Header page="about" />
+<Layout title={pageTitle} pageTab={pageTab}>
   <Introduction />
 
   <section class="w-11/12 mx-auto lg:w-2/3">
@@ -53,5 +53,4 @@ const pageTitle = "About me";
     </ul>
   </section>
   <Experience />
-  <Footer />
 </Layout>

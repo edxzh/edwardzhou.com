@@ -1,11 +1,9 @@
 ---
-import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 const pageTitle = "blogs";
+const pageTab = "posts";
 ---
 
-<Layout title={pageTitle}>
-  <Header page="blog" />
-</Layout>
+<Layout title={pageTitle} pageTab={pageTab}>something</Layout>

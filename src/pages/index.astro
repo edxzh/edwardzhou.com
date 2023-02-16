@@ -4,16 +4,15 @@ import FeatureBlog from "../components/home/FeatureBlog.astro";
 import SubscribeEmail from "../components/home/SubscribeEmail.astro";
 import Blogs from "../components/home/Blogs.astro";
 import AboutMe from "../components/home/AboutMe.astro";
-import Footer from "../components/Footer.astro";
 
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 const pageTitle = "Edward Zhou";
+const pageTab = "home";
 ---
 
-<Layout title={pageTitle}>
-  <Header page="home" />
+<Layout title={pageTitle} pageTab={pageTab}>
   <!-- featured blog section -->
   <FeatureBlog />
   <!-- Subscribe email section -->
@@ -27,7 +26,6 @@ const pageTitle = "Edward Zhou";
     <!-- about me -->
     <AboutMe />
   </section>
-  <Footer />
   <script>
     import "../scripts/menu.js";
   </script>

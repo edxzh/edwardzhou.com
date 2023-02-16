@@ -1,5 +1,5 @@
 ---
-const { page } = Astro.props;
+const { pageTab } = Astro.props;
 ---
 
 <header>
@@ -21,7 +21,7 @@ const { page } = Astro.props;
             "h-12",
             "w-44",
             "hover:text-purple-500",
-            { "text-purple-500": page == "home" },
+            { "text-purple-500": pageTab == "home" },
           ]}
         >
           <a href="/" class="flex items-center justify-center h-full">Home</a>
@@ -31,7 +31,7 @@ const { page } = Astro.props;
             "h-12",
             "w-44",
             "hover:text-purple-500",
-            { "text-purple-500": page == "about" },
+            { "text-purple-500": pageTab == "about" },
           ]}
         >
           <a href="/about" class="flex items-center justify-center h-full"
@@ -43,7 +43,7 @@ const { page } = Astro.props;
             "h-12",
             "w-44",
             "hover:text-purple-500",
-            { "text-purple-500": page == "blog" },
+            { "text-purple-500": pageTab == "posts" },
           ]}
         >
           <a class="flex items-center justify-center h-full" href="/posts"
