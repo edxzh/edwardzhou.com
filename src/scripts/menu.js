@@ -1,3 +1,1 @@
-document.querySelector(".hamburger").addEventListener("click", () => {
-  console.log("aaaaaaaaaaaa");
-});
+console.log(111);

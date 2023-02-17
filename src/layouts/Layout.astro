@@ -10,11 +10,18 @@ import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
-<html class="{ 'dark': dark }" x-data="data()" lang="en">
+<html
+  x-data="{ darkMode: (
+    !!window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  )} "
+  x-bind:class="{ 'dark': darkMode }"
+  lang="en"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -22,31 +29,5 @@ import Footer from "../components/Footer.astro";
     <Header pageTab={pageTab} />
     <slot />
     <Footer />
-    <script>
-      function data() {
-        function getThemeFromLocalStorage() {
-          if (window.localStorage.getItem("dark")) {
-            return JSON.parse(window.localStorage.getItem("dark"));
-          }
-
-          return (
-            !!window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-          );
-        }
-
-        function setThemeToLocalStorage(value) {
-          window.localStorage.setItem("dark", value);
-        }
-
-        return {
-          dark: getThemeFromLocalStorage(),
-          toggleTheme() {
-            this.dark = !this.dark;
-            setThemeToLocalStorage(this.dark);
-          },
-        };
-      }
-    </script>
   </body>
 </html>
