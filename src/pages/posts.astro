@@ -9,12 +9,18 @@ const pageTab = "posts";
 ---
 
 <Layout title={pageTitle} pageTab={pageTab}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
+  <div class="w-1/2 mx-auto grid grid-cols-2 gap-4">
     {
       allPosts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
+        <BlogPost
+          url={post.url}
+          title={post.frontmatter.title}
+          publishDate={post.frontmatter.publishDate}
+          timeToRead={post.frontmatter.timeToRead}
+          imgSrc={post.frontmatter.image.url}
+          imgAlt={post.frontmatter.image.alt}
+        />
       ))
     }
-  </ul>
+  </div>
 </Layout>

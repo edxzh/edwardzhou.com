@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Blog Post'
-pubDate: 2022-07-01
-timeToRead: 2 mins
+publishDate: '2022-07-01'
+timeToRead: '2 mins'
 description: 'This is the first post of my new Astro blog.'
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 

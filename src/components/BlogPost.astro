@@ -1,7 +1,27 @@
 ---
-const { url, title, publishDate, timeToRead } = Astro.props;
+const { url, title, publishDate, timeToRead, imgSrc, imgAlt } = Astro.props;
 ---
 
-<li>
-  <a href={url}>{title}</a>
-</li>
+<div
+  class="border border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
+>
+  <img src={imgSrc} alt={imgAlt} />
+  <section class="py-8 pl-4 pr-4">
+    <div class="text-sm text-slate-700 dark:text-slate-400">
+      <time class="mr-1">{publishDate}</time>
+      <span
+        class="mr-1 relative bottom-0.5 inline-block w-0.5 h-0.5 rounded-full bg-slate-400 dark:bg-slate-400"
+      ></span>
+      <span>{timeToRead}</span>
+    </div>
+    <div class="hover:text-purple-500">
+      <h1 class="mt-6 text-2xl hover:text-purple-500">
+        Everything about books: what I'm reading during X-mas leave
+      </h1>
+      <p class="mt-4 text-slate-700 dark:text-slate-500">
+        Create a blog post subtitle that summarizes your post in a few short,
+        punchy sentences and entices your audience to continue reading....
+      </p>
+    </div>
+  </section>
+</div>
