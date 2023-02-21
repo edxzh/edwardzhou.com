@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
   >
     <section class="px-4 py-8 lg:pl-8 lg:pr-20">
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.pubDate.slice(0, 10)}</p>
+      <p>{frontmatter.publishDate}</p>
       <p><em>{frontmatter.description}</em></p>
       <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
 
