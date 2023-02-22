@@ -1,18 +1,27 @@
 ---
+type Image = {
+  url: string;
+  alt: string;
+};
+interface Props {
+  title: string;
+  publishDate: string;
+  description: string;
+  image: Image;
+}
 import Layout from "./Layout.astro";
-const { frontmatter } = Astro.props;
+const { title, publishDate, description, image } = Astro.props.frontmatter;
 ---
 
-<Layout title={frontmatter.title} pageTab="posts">
+<Layout title={title} pageTab="posts">
   <section
     class="w-11/12 mx-auto border lg:w-1/2 border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
   >
     <section class="px-4 py-8 lg:pl-8 lg:pr-20">
-      <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.publishDate}</p>
-      <p><em>{frontmatter.description}</em></p>
-      <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-
+      <h1>{title}</h1>
+      <p>{publishDate}</p>
+      <p><em>{description}</em></p>
+      <img src={image.url} alt={image.alt} />
       <slot />
     </section>
   </section>

@@ -3,10 +3,12 @@ const { url, title, publishDate, timeToRead, imgSrc, imgAlt } = Astro.props;
 ---
 
 <div
-  class="border border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
+  class="border border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset mb-8"
 >
-  <img src={imgSrc} alt={imgAlt} />
-  <section class="py-8 pl-4 pr-4">
+  <a href={url}>
+    <img src={imgSrc} alt={imgAlt} />
+  </a>
+  <section class="py-6 pl-4 pr-4">
     <div class="text-sm text-slate-700 dark:text-slate-400">
       <time class="mr-1">{publishDate}</time>
       <span
@@ -14,14 +16,14 @@ const { url, title, publishDate, timeToRead, imgSrc, imgAlt } = Astro.props;
       ></span>
       <span>{timeToRead}</span>
     </div>
-    <div class="hover:text-purple-500">
-      <h1 class="mt-6 text-2xl hover:text-purple-500">
-        Everything about books: what I'm reading during X-mas leave
-      </h1>
-      <p class="mt-4 text-slate-700 dark:text-slate-500">
-        Create a blog post subtitle that summarizes your post in a few short,
-        punchy sentences and entices your audience to continue reading....
-      </p>
-    </div>
+    <a href={url}>
+      <div class="hover:text-purple-500">
+        <h1 class="mt-6 text-2xl hover:text-purple-500">{title}</h1>
+        <p class="mt-4 text-slate-700 dark:text-slate-500">
+          Create a blog post subtitle that summarizes your post in a few short,
+          punchy sentences and entices your audience to continue reading....
+        </p>
+      </div>
+    </a>
   </section>
 </div>
