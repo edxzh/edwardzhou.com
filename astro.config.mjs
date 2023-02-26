@@ -20,7 +20,7 @@ export default defineConfig({
     alpinejs(),
     mdx({
       syntaxHighlight: "shiki",
-      shikiConfig: { theme: "dracula" },
+      shikiConfig: { theme: "github-light" },
       remarkPlugins: [remarkToc],
       rehypePlugins: [rehypeMinifyHtml, rehypeHeadingIds],
       remarkRehype: { footnoteLabel: "Footnotes" },

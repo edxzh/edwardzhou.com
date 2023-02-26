@@ -10,9 +10,14 @@ image:
 tags: ["My Blog", "Astro", "Blogging", "Learning in public"]
 ---
 
+import Blockquote from '@components/Blockquote.astro';
+export const components = {blockquote: Blockquote}
+
 ``` bash
 npm create astro@latest -- --template basics
 ```
+
+
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
@@ -25,6 +30,8 @@ const a = ["abc", "edx"].each((e) =>> {
   console.log(e);
 })
 ```
+
+> 冷雨扑向我
 
 Inside of your Astro project, you'll see the following folders and files:
 
