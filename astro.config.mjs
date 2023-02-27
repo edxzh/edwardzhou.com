@@ -23,8 +23,9 @@ export default defineConfig({
       shikiConfig: { theme: "github-light" },
       remarkPlugins: [remarkToc],
       rehypePlugins: [rehypeMinifyHtml, rehypeHeadingIds],
-      remarkRehype: { footnoteLabel: "Footnotes" },
-      gfm: false,
+      remarkRehype: {
+        footnoteLabel: "Footnotes",
+      },
     }),
   ],
 });

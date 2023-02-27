@@ -1,0 +1,5 @@
+@tailwind components;
+
+tr {
+    @apply border-spacing-2 border-slate-100 border;
+}
