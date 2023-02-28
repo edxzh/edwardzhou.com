@@ -19,7 +19,7 @@ const pageTab = "posts";
     {
       allPosts.map((post) => (
         <BlogPost
-          url={post.url}
+          url={post.url!}
           title={post.frontmatter.title}
           publishDate={post.frontmatter.publishDate}
           timeToRead={post.frontmatter.timeToRead}
