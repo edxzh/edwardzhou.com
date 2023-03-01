@@ -4,18 +4,6 @@ const props = Astro.props;
 import "../../styles/mdx_table.css";
 ---
 
-<style>
-  @tailwind components;
-
-  tr {
-    @apply border-spacing-2 border-slate-500 border-collapse border;
-  }
-
-  td {
-    @apply p-4;
-  }
-</style>
-
-<table>
+<table class="mb-4">
   <slot />
 </table>

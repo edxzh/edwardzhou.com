@@ -1,5 +1,9 @@
 @tailwind components;
 
-tr {
+table tr {
     @apply border-spacing-2 border-slate-100 border;
+}
+
+table td, th {
+    @apply border-slate-200 border px-4 py-2;
 }

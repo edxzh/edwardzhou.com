@@ -21,7 +21,7 @@ const { title, publishDate, description, image, tags, timeToRead } =
 <Layout title={title} pageTab="posts">
   <TagNav uniqueTags={tags} />
   <section
-    class="w-11/12 px-8 mx-auto border lg:w-1/2 border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
+    class="w-11/12 px-8 mx-auto border lg:w-3/5 border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
   >
     <section class="px-4 py-10 lg:pl-8 lg:pr-20">
       <div class="text-sm text-slate-700 dark:text-slate-400">
@@ -31,9 +31,9 @@ const { title, publishDate, description, image, tags, timeToRead } =
         ></span>
         <span>{timeToRead}</span>
       </div>
-      <h2 class="text-2xl text-center my-10">{title}</h2>
-      <p class="mb-10"><em>{description}</em></p>
-      <img src={image.url} alt={image.alt} class="mb-10" />
+      <h1 class="text-3xl text-center my-10">{title}</h1>
+      <p class="mb-8"><em>{description}</em></p>
+      <img src={image.url} alt={image.alt} class="mb-6" />
       <slot />
     </section>
   </section>
