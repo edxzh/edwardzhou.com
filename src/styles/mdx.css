@@ -7,3 +7,7 @@ table tr {
 table td, th {
     @apply border-slate-200 border px-4 py-2;
 }
+
+.blog-body p {
+    @apply text-lg;
+}

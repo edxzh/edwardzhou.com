@@ -7,13 +7,16 @@ import AboutMe from "@components/home/AboutMe.astro";
 import Layout from "@layouts/Layout.astro";
 import "../styles/global.css";
 
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
+const featured_blog = allPosts.filter((post) => post.frontmatter.featured)[0];
+
 const pageTitle = "Edward Zhou";
 const pageTab = "home";
 ---
 
 <Layout title={pageTitle} pageTab={pageTab}>
   <!-- featured blog section -->
-  <FeatureBlog />
+  <FeatureBlog blog={featured_blog} />
   <!-- Subscribe email section -->
   <SubscribeEmail />
   <!-- blogs and about me section -->
