@@ -1,0 +1,43 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: Why I create this website from scratch
+author: Edward Zhou
+description: "If you'd have your own blog website but are not happy with the current open sourced blog solution, the good news is: it's not as hard as you thought."
+image:
+  url: "https://docs.astro.build/default-og-image.png"
+  alt: "The word “astro” against an illustration of planets and stars."
+publishDate: "04-03-2023"
+timeToRead: "5 mins"
+tags: ["Web", "Programming"]
+---
+import Blockquote from "@components/mdx/Blockquote.astro";
+import Code from "@components/mdx/Code.astro";
+import Pre from "@components/mdx/Pre.astro";
+import P from "@components/mdx/P.astro";
+import A from "@components/mdx/A.astro";
+import H2 from "@components/mdx/H2.astro";
+import H3 from "@components/mdx/H3.astro";
+import Table from "@components/mdx/Table.astro";
+
+export const components = {
+  blockquote: Blockquote,
+  pre: Pre,
+  h2: H2,
+  h3: H3,
+  p: P,
+  table: Table,
+  code: Code,
+  a: A,
+};
+
+## My previous experience of building a blog website
+It's been 8 years since I published my first self-built blog website, the project was [open-sourced](https://github.com/edxzh/xingishere) and mainly built on `Ruby On Rails` and `bootstrap`, you might still able to run it locally today if you are lucky, it was my second year as a full time backend developer after I graduated, My intension was to use this project as an opportunity to increase my web development skills, so I can be more eligible for my professional job.
+
+With the help offered by my colleagues at the time, the project goes pretty well, after the first version release, I became ambitious and add as much technologies as possible, though it might not necessary for a blog website. some of the technologies are still being well adopted these days, like `mongoDB`, `memcached` for cache, all data is kept in `mysql`, I also add `https` certificate, and `nginx` as reverse proxy before unicorn(a ruby gem), you name it! visitors are able to signup and comment on my blogs, also subscribe so they can get a well styled weekly email. I put a ton of effort on it, you can get it from over `800` commits it has, all my effort pays off - I learnt a lot from it and become confident in my professional area.
+
+I was quite excited after I first deployed it in `digitalOcean`, then tried to add more blogs in the following one or two years, most of the blogs are about `ruby on rails`, some of them were popular, the feeling of being recognized is superb.
+
+the website was out of service after about 3 years, when I felt I don't know what to write about for a long while, I allow the domain expired and stop paying digitalOcean for the instance fee, what's interesting is the domain was soon bought by someone else who deployed a porn site on it 😞.
+
+## why I'm doing it again
+I'm entering into 10 years working anniversary very soon,

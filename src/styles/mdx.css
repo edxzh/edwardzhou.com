@@ -9,5 +9,5 @@ table td, th {
 }
 
 .blog-body p {
-    @apply text-lg;
+    @apply text-lg text-slate-800;
 }
