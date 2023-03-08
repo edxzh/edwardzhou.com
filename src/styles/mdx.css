@@ -9,5 +9,9 @@ table td, th {
 }
 
 .blog-body p {
+    @apply text-lg text-slate-800 mb-2 leading-8;
+}
+
+.blog-body li {
     @apply text-lg text-slate-800;
 }

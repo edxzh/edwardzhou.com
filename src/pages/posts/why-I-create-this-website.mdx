@@ -4,30 +4,27 @@ title: Why I create this website from scratch
 author: Edward Zhou
 description: "If you'd have your own blog website but are not happy with the current open sourced blog solution, the good news is: it's not as hard as you thought."
 image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word “astro” against an illustration of planets and stars."
+  url: "blogs/why-i-build-this-website.png"
+  alt: "why-i-build-this-website"
 publishDate: "04-03-2023"
-timeToRead: "5 mins"
+featured: true
+timeToRead: "10 mins"
 tags: ["Web", "Programming"]
 ---
-import Blockquote from "@components/mdx/Blockquote.astro";
-import Code from "@components/mdx/Code.astro";
 import Pre from "@components/mdx/Pre.astro";
-import P from "@components/mdx/P.astro";
 import A from "@components/mdx/A.astro";
+import Code from "@components/mdx/Code.astro";
 import H2 from "@components/mdx/H2.astro";
 import H3 from "@components/mdx/H3.astro";
 import Table from "@components/mdx/Table.astro";
 
 export const components = {
-  blockquote: Blockquote,
   pre: Pre,
   h2: H2,
   h3: H3,
-  p: P,
   table: Table,
-  code: Code,
   a: A,
+  code: Code,
 };
 
 ## My previous experience of building a blog website
@@ -45,11 +42,11 @@ on top of that, I'm approaching my 10 years working anniversary, sometimes I fee
 besides that, I never realize writing skill is essential in the working space until I joined my current company, I was simply shocked after I randomly picked up some blogs from the popular feed, to make a good blog, you have to scheme out the steps of demonstrating your ideas best to the readers, it drives you to drill down the detail of the topic, your writing skill can colorize a boring story and make it attractive, reading an amazing blog is like a breeze in the hot days.
 
 ## how long it takes me to build this website
-I didn't count every hours I commited so I can not give a clear answer, you can probably check out the analytics from github, yes this website is open-sourced, most of the development time was on the `CSS`.
+I didn't count every hours I commited so I can not give a clear answer, you can probably check out the analytics from github, yes this website is also [open-sourced](https://github.com/edxzh/edwardzhou.com), the majority of development time was spent on the `CSS`.
 
 ## some tech detail about this website
-* TypeScript is the main language for the project, though there isn't much typescript code so far.
-* [https://astro.build/](AstroJs) is the main framework for the website, I was surprised on how easy it is to build a static site with it.
-* [https://tailwindcss.com/](TailwindCss) is my go-to css library for my personal project, I'd not hesitate to recommend it to any individual developer or small start-ups. it's super fast to craft a beautiful website with it.
-* [https://alpinejs.dev/](AlpineJS) is another straightforward javascript framework, you can learn how to use it in 5 mins with the examples on the official website.
-* [https://www.netlify.com/](netlify) helps with the deployment, once main branch was updated it can deploy to production in 2 mins.
+* [TypeScript](https://www.typescriptlang.org/) is the main language for the project, though there isn't much typescript code so far.
+* [AstroJs](https://astro.build/) is the main framework for the website, I was surprised on how easy it is to build a static site with it.
+* [TailwindCss](https://tailwindcss.com/) is my go-to css library for my personal project, I'd not hesitate to recommend it to any individual developer or small start-ups. it's super fast to craft a beautiful website with it.
+* [AlpineJS](https://alpinejs.dev/) is another straightforward javascript framework, you can learn how to use it in 5 mins with the examples on the official website.
+* [netlify](https://www.netlify.com/) helps with the deployment, once main branch was updated it can deploy to production in 2 mins.
