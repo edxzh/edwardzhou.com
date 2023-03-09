@@ -8,6 +8,11 @@ import Layout from "@layouts/Layout.astro";
 import "../styles/global.css";
 
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
+const latestPosts = allPosts
+  .sort((a, b) =>
+    a.frontmatter.publishDate > b.frontmatter.publishDate ? 1 : -1
+  )
+  .slice(0, 10);
 const featured_blog = allPosts.filter((post) => post.frontmatter.featured)[0];
 
 const pageTitle = "Edward Zhou";
@@ -24,7 +29,7 @@ const pageTab = "home";
     class="w-11/12 py-8 mx-auto border-b border-slate-700 dark:border-slate-100 lg:grid lg:grid-cols-3"
   >
     <!-- blogs -->
-    <Blogs />
+    <Blogs blogs={latestPosts} />
     <!-- about me -->
     <AboutMe />
   </section>
