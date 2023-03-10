@@ -8,7 +8,7 @@ const { blogs } = Astro.props;
     <p
       class="lg:tracking-[.5em] text-2xl mx-auto lg:mb-14 text-center lg:text-left"
     >
-      TRAIN OF THOUGHT
+      THOUGHTS
     </p>
     {
       blogs.map((post: Post) => (
@@ -18,14 +18,16 @@ const { blogs } = Astro.props;
             <span class="mr-1 relative bottom-0.5 inline-block w-0.5 h-0.5 rounded-full bg-slate-400 dark:bg-slate-400" />
             <span>{post.frontmatter.timeToRead}</span>
           </div>
-          <div class="hover:text-purple-500">
-            <h1 class="mt-6 text-2xl hover:text-purple-500">
-              {post.frontmatter.title}
-            </h1>
-            <p class="mt-4 text-slate-700 dark:text-slate-500">
-              {post.frontmatter.description}
-            </p>
-          </div>
+          <a href={post.url}>
+            <div class="hover:text-purple-500">
+              <h1 class="mt-6 text-2xl hover:text-purple-500">
+                {post.frontmatter.title}
+              </h1>
+              <p class="mt-4 text-slate-700 dark:text-slate-500">
+                {post.frontmatter.description}
+              </p>
+            </div>
+          </a>
         </section>
       ))
     }
