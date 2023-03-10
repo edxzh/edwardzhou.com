@@ -53,13 +53,27 @@ const { pageTab } = Astro.props;
             >My Blog</a
           >
         </li>
-        <li class="h-12 w-44 hover:text-purple-500">
-          <a class="flex items-center justify-center h-full" href="/blogs"
+        <li
+          class:list={[
+            "h-12",
+            "w-44",
+            "hover:text-purple-500",
+            { "text-purple-500": pageTab == "team" },
+          ]}
+        >
+          <a class="flex items-center justify-center h-full" href="/team"
             >Our Team</a
           >
         </li>
-        <li class="h-12 w-44 hover:text-purple-500">
-          <a class="flex items-center justify-center h-full" href=""
+        <li
+          class:list={[
+            "h-12",
+            "w-44",
+            "hover:text-purple-500",
+            { "text-purple-500": pageTab == "contact" },
+          ]}
+        >
+          <a class="flex items-center justify-center h-full" href="/contact"
             >Contact Us</a
           >
         </li>

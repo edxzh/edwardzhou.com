@@ -10,6 +10,12 @@ const uniqueTags = [
 ];
 const pageTitle = "blogs";
 const pageTab = "posts";
+
+const imageUrl = (url: string) => {
+  const { protocol, host } = Astro.url;
+
+  return `${protocol}//${host}/${url}`;
+};
 ---
 
 <Layout title={pageTitle} pageTab={pageTab}>
@@ -23,7 +29,7 @@ const pageTab = "posts";
           title={post.frontmatter.title}
           publishDate={post.frontmatter.publishDate}
           timeToRead={post.frontmatter.timeToRead}
-          imgSrc={post.frontmatter.image.url}
+          imgSrc={imageUrl(post.frontmatter.image.url)}
           imgAlt={post.frontmatter.image.alt}
         />
       ))

@@ -16,6 +16,9 @@ import "../styles/mdx.css";
 
 const { title, publishDate, description, image, tags, timeToRead } =
   Astro.props.frontmatter;
+
+const { host, protocol } = Astro.url;
+const imageUrl = `${protocol}//${host}/${image.url}`;
 ---
 
 <Layout title={title} pageTab="posts">
@@ -33,7 +36,7 @@ const { title, publishDate, description, image, tags, timeToRead } =
       </div>
       <h1 class="text-3xl text-center my-10">{title}</h1>
       <p class="mb-8"><em>{description}</em></p>
-      <img src={`../${image.url}`} alt={image.alt} class="mb-6" />
+      <img src={imageUrl} alt={image.alt} class="mb-6" />
       <slot />
     </section>
   </section>
