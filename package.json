@@ -1,7 +1,7 @@
 {
-  "name": "@example/basics",
+  "name": "edwardzhou.com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "lint": "prettier --write .",
@@ -9,12 +9,8 @@
     "start": "astro dev",
     "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
-    "astro": "astro"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "astro": "astro",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "./src/**/*.astro": [
@@ -23,23 +19,23 @@
     ]
   },
   "dependencies": {
+    "alpinejs": "^3.0.0",
+    "astro": "^2.0.4",
+    "flowbite": "^1.6.3"
+  },
+  "devDependencies": {
     "@astrojs/alpinejs": "^0.1.3",
     "@astrojs/mdx": "^0.17.2",
     "@astrojs/tailwind": "^3.0.1",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/alpinejs": "^3.0.0",
-    "alpinejs": "^3.0.0",
-    "astro": "^2.0.4",
-    "flowbite": "^1.6.3",
-    "husky": "^8.0.3",
-    "rehype": "^12.0.1",
     "remark-toc": "^8.0.1",
-    "tailwindcss": "^3.0.24"
-  },
-  "devDependencies": {
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "prettier-plugin-astro": "^0.8.0"
+    "husky": "^8.0.0",
+    "prettier-plugin-astro": "^0.8.0",
+    "rehype": "^12.0.1",
+    "tailwindcss": "^3.0.24"
   }
 }
