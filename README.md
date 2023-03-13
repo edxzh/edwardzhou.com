@@ -3,19 +3,23 @@
 my personal blog website
 
 ## Built With
+
 ![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)
 ![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-%2338b2ac?style=flat-square&logo=tailwind-css&logoColor=white)
 
 ## Preview
+
 https://edwardzhou.com
 
 ## How to add a new blog
+
 Add a new `.mdx` file in the `/src/pages/posts` folder, the name of the .mdx file will become the blog url. follow the format of the other mdx files to write your blog.
 
 if your blog includes images or videos, you can put them in
-* public/ folder, or
-* third-party static file host platform.
-then refer the files in the markdown
+
+- public/ folder, or
+- third-party static file host platform.
+  then refer the files in the markdown
 
 ### more about [mdx](https://github.com/mdx-js/mdx) file
 

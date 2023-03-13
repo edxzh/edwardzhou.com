@@ -10,6 +10,7 @@ image:
   alt: "The Astro logo with the word One."
 tags: ["My Blog", "Astro", "Blogging", "Learning in public"]
 ---
+
 import Blockquote from "@components/mdx/Blockquote.astro";
 import Pre from "@components/mdx/Pre.astro";
 import P from "@components/mdx/P.astro";
@@ -26,7 +27,7 @@ export const components = {
   table: Table,
 };
 
-``` bash
+```bash
 npm create astro@latest -- --template basics
 ```
 
@@ -34,15 +35,22 @@ npm create astro@latest -- --template basics
 
 ![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
 
-## 🚀 Project Structure
+## 🚀 example code
 
-``` javascript
-const a = ["abc", "edx"].each((e) => {
-  console.log(e);
-})
+```javascript
+let liveSocket = new LiveSocket("/live", Socket, {
+  params: { _csrf_token: csrfToken },
+  dom: {
+    onBeforeElUpdated(from, to) {
+      if (from.__x) {
+        Alpine.clone(from.__x, to);
+      }
+    },
+  },
+});
 ```
 
-> “冷雨扑向我”
+> What you do not want done to yourself, do not do to others. - Confucius
 
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
 

@@ -10,10 +10,10 @@
   }
 
   .highlight_tag {
-    @apply block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-purple-500 md:p-0
+    @apply block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-purple-500 md:p-0;
   }
 
   .normal_tag {
-    @apply block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400
+    @apply block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400;
   }
 }

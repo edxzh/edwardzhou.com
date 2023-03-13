@@ -1,17 +1,18 @@
 @tailwind components;
 
 table tr {
-    @apply border-spacing-2 border-slate-100 border;
+  @apply border-spacing-2 border-slate-100 border;
 }
 
-table td, th {
-    @apply border-slate-200 border px-4 py-2;
+table td,
+th {
+  @apply border-slate-200 border px-4 py-2;
 }
 
 .blog-body p {
-    @apply text-lg text-slate-800 mb-2 leading-8;
+  @apply text-lg text-slate-800 mb-2 leading-8;
 }
 
 .blog-body li {
-    @apply text-lg text-slate-800;
+  @apply text-lg text-slate-800;
 }
