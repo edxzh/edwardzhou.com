@@ -12,9 +12,8 @@ const pageTitle = "blogs";
 const pageTab = "posts";
 
 const imageUrl = (url: string) => {
-  const { protocol, host } = Astro.url;
-
-  return `${protocol}//${host}/${url}`;
+  const prod_url = new URL(url, Astro.site);
+  return prod_url.toString();
 };
 ---
 

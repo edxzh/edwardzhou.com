@@ -15,6 +15,7 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://edwardzhou.com",
   integrations: [
     tailwind(),
     alpinejs(),

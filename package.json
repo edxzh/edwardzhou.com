@@ -12,12 +12,6 @@
     "astro": "astro",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "./src/**/*.astro": [
-      "prettier -w 'src/**/*.astro'",
-      "git add"
-    ]
-  },
   "dependencies": {
     "alpinejs": "^3.0.0",
     "astro": "^2.0.4",
@@ -31,7 +25,6 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/alpinejs": "^3.0.0",
     "remark-toc": "^8.0.1",
-    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "husky": "^8.0.0",
     "prettier-plugin-astro": "^0.8.0",
