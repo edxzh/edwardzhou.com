@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Why I create this website from scratch
 author: Edward Zhou
-description: "If you'd have your own blog website but are not happy with the current open sourced blog solution, the good news is: it's not as hard as you thought."
+description: "The idea of building a personal website has been in my mind for a long while, what prevent me from starting is my first experience of building a website from scratch, I know it going to takes me a lot of time, but remember, GREAT THINGS COME FROM SMALL BEGINNINGS"
 image:
   url: "blogs/why-i-build-this-website.png"
   alt: "why-i-build-this-website"
@@ -32,21 +32,23 @@ export const components = {
 
 It's been 8 years since I published my first self-built blog website, the project was [open-sourced](https://github.com/edxzh/xingishere) and mainly built on `Ruby On Rails` and `bootstrap`, you might still able to run it locally today if you are lucky, it was my second year as a full time backend developer after I graduated, My intension was to use this project as an opportunity to increase my web development skills, so I can be more eligible for my professional job.
 
-With the help offered by my colleagues at the time, the project goes pretty well, after the first version release, I became ambitious and add as much technologies as possible, though it might not necessary for a blog website. some of the technologies are still being well adopted these days, like `mongoDB`, `memcached` for cache, all data is kept in `mysql`, I also add `https` certificate, and `nginx` as reverse proxy before unicorn(a ruby gem), you name it! visitors are able to signup and comment on my blogs, also subscribe so they can get a well styled weekly email. I put a ton of effort on it, you can get it from over `800` commits it has, all my effort pays off - I learnt a lot from it and become confident in my professional area.
+With the help offered by my colleagues at the time, the project went pretty well, after the first version release, I became ambitious and add as much technologies as possible, though they might not necessary for a blog website. some of the technologies are still being well adopted these days, like `mongoDB`, `memcached`, `mysql`, I also add `https` certificate supplied by let's Encrypt, and `nginx` as reverse proxy in front of unicorn(a ruby gem), visitors are able to signup/login and comment on my blogs, also subscribe my website so they can get a well styled weekly email that includes my newest blogs. I put a ton of effort on it, you can get it from over `800` commits it has, the good thing is, all my effort pays off - I learnt a lot from it and become confident in my professional area. then successfuly get an offer from my dream company.
 
-I was quite excited after I first deployed it in `digitalOcean`, then tried to add more blogs in the following one or two years, most of the blogs are about `ruby on rails`, some of them were popular, the feeling of being recognized is superb.
+I was quite excited after I first deployed it in `digitalOcean`, then stick to add at least one blog per week in the following one or two years, most of the topics are about `ruby on rails`, some of blogs were popular and shared to many platforms, that feeling of being recognized is superb.
 
-the website was out of service after about 3 years, when I felt I don't know what to write about for a long while, I allow the domain expired and stop paying digitalOcean for the instance fee, what's interesting is the domain was soon bought by someone else who deployed a porn site on it 😞.
+the website was out of service after about 3 years, when I felt I don't know what to write about for a long while, I allowed the domain expired and stop paying digitalOcean for the instance fee, what's interesting is the domain was soon bought by someone else who deployed a porn site on it 😞.
 
 ## why I'm doing it again
 
 certainly, I'd like to check out the newest framework of front-end, front-end has been rapidly envolving these years, again, I'd utilize this idea as an opportunity to try something new.
-on top of that, I'm approaching my 10 years working anniversary, sometimes I feel there are a lot of ideas in my head, but most of the flash away right away, which I'd have noted down and explore further, it's a privilege to analyse one's own mind.
-besides that, I never realize writing skill is essential in the working space until I joined my current company, I was simply shocked after I randomly picked up some blogs from the popular feed, to make a good blog, you have to scheme out the steps of demonstrating your ideas best to the readers, it drives you to drill down the detail of the topic, your writing skill can colorize a boring story and make it attractive, reading an amazing blog is like a breeze in the hot days.
+
+besides that, I never realize writing skill is essential in the working space until I joined my current company, I was totally shocked after I randomly checkout out some blogs from the company blog platform popular feed, in order to make a convincing blog, you have to scheme out how to demonstrate your idea best to the readers, it drives you to drill down the detail of the topic, it's a great way to make sure you trully understand something, writing skill can colorize a boring story, reading an amazing blog is like a breeze in the hot days.
+
+I knew it's going to be a long journey, those trivial CSS layout, responsiveness, deployment, SEO, etc, the fear of it might take me forever to finish is the main reason that stopped me from get the ball rolling, but once I start, it didn't seem to be as hard as I expected, I also enjoy the progress, I'm satisfied when a new section was finished, and I was amused by the new concept `AstroJS` offers. the deployment is much easier that I estimated as well.
 
 ## how long it takes me to build this website
 
-I didn't count every hours I commited so I can not give a clear answer, you can probably check out the analytics from github, yes this website is also [open-sourced](https://github.com/edxzh/edwardzhou.com), the majority of development time was spent on the `CSS`.
+It took me a lot of my personal time, just like leetcode did to me before, you can probably get something from the analytics page from github, yes this website is also [open-sourced](https://github.com/edxzh/edwardzhou.com), the majority of development time was spent on the `CSS`.
 
 ## some tech detail about this website
 
@@ -54,4 +56,4 @@ I didn't count every hours I commited so I can not give a clear answer, you can 
 - [AstroJs](https://astro.build/) is the main framework for the website, I was surprised on how easy it is to build a static site with it.
 - [TailwindCss](https://tailwindcss.com/) is my go-to css library for my personal project, I'd not hesitate to recommend it to any individual developer or small start-ups. it's super fast to craft a beautiful website with it.
 - [AlpineJS](https://alpinejs.dev/) is another straightforward javascript framework, you can learn how to use it in 5 mins with the examples on the official website.
-- [netlify](https://www.netlify.com/) helps with the deployment, once main branch was updated it can deploy to production in 2 mins.
+- [netlify](https://www.netlify.com/) helps with the deployment, once main branch was updated it can deploy to production in 2 mins. it can also help setup https certificate with Let's encrypt.
