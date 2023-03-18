@@ -1,10 +1,14 @@
 @tailwind components;
 
-table tr {
+.blog-body table {
+  @apply mb-4;
+}
+
+.blog-body table tr {
   @apply border-spacing-2 border-slate-100 border;
 }
 
-table td,
+.blog-body table td,
 th {
   @apply border-slate-200 border px-4 py-2;
 }
@@ -15,4 +19,12 @@ th {
 
 .blog-body li {
   @apply text-lg text-slate-800;
+}
+
+.blog-body h2 {
+  @apply mb-4 text-2xl font-medium leading-8 text-slate-800;
+}
+
+.blog-body h3 {
+  @apply mb-2 text-xl font-medium leading-8;
 }
