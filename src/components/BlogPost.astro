@@ -6,8 +6,10 @@ interface Props {
   timeToRead: string;
   imgSrc: string;
   imgAlt: string;
+  description: string;
 }
-const { url, title, publishDate, timeToRead, imgSrc, imgAlt } = Astro.props;
+const { url, title, publishDate, timeToRead, imgSrc, imgAlt, description } =
+  Astro.props;
 ---
 
 <div
@@ -28,8 +30,7 @@ const { url, title, publishDate, timeToRead, imgSrc, imgAlt } = Astro.props;
       <div class="hover:text-purple-500">
         <h1 class="mt-6 text-2xl hover:text-purple-500">{title}</h1>
         <p class="mt-4 text-slate-700 dark:text-slate-500">
-          Create a blog post subtitle that summarizes your post in a few short,
-          punchy sentences and entices your audience to continue reading....
+          {description}
         </p>
       </div>
     </a>

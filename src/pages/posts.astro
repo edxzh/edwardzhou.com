@@ -15,6 +15,18 @@ const imageUrl = (url: string) => {
   const prod_url = new URL(url, Astro.site);
   return prod_url.toString();
 };
+
+const truncate = (str: string, n: number, useWordBoundary: boolean) => {
+  if (str.length <= n) {
+    return str;
+  }
+  const subString = str.slice(0, n - 1);
+  return (
+    (useWordBoundary
+      ? subString.slice(0, subString.lastIndexOf(" "))
+      : subString) + "..."
+  );
+};
 ---
 
 <Layout title={pageTitle} pageTab={pageTab}>
@@ -26,6 +38,7 @@ const imageUrl = (url: string) => {
         <BlogPost
           url={post.url!}
           title={post.frontmatter.title}
+          description={truncate(post.frontmatter.description, 100, true)}
           publishDate={post.frontmatter.publishDate}
           timeToRead={post.frontmatter.timeToRead}
           imgSrc={imageUrl(post.frontmatter.image.url)}
