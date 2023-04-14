@@ -10,9 +10,9 @@ import "../styles/global.css";
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
 const latestPosts = allPosts
   .sort((a, b) =>
-    a.frontmatter.publishDate > b.frontmatter.publishDate ? 1 : -1
+    a.frontmatter.publishDate > b.frontmatter.publishDate ? -1 : 1
   )
-  .slice(0, 10);
+  .slice(0, 5);
 const featured_blog = allPosts.filter((post) => post.frontmatter.featured)[0];
 
 const pageTitle = "Edward Zhou";
