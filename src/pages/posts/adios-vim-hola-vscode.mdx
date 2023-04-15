@@ -1,0 +1,54 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Adios Vim, Hola Vscode"
+publishDate: "2023-04-10"
+timeToRead: "5 mins"
+description: "Vim has been my only IDE even before I graduate from college, after using almost 10 years, I embraced Vscode and make it my day-to-day IDE"
+featured: false
+image:
+  url: "blogs/vim-vs-vscode.png"
+  alt: "vim vs vscode"
+tags: ["Programming"]
+---
+
+import Blockquote from "@components/mdx/Blockquote.astro";
+import Pre from "@components/mdx/Pre.astro";
+import Code from "@components/mdx/Code.astro";
+
+export const components = {
+  blockquote: Blockquote,
+  pre: Pre,
+  code: Code
+};
+
+## Why Vim?
+So long as I know only a small percent of developers pick up Vim as main IDE, a fair amout of people don't even know how to exit it, these makes those who master Vim looks cool, every action is handled by typing, mouse becomes useless, when the first time I make this text editor turns to a beautiful IDE, I'm really excited and can't help to share with my connections.
+
+It's people with passion and love that transforms Vim to powerful tool, they encourage public to donate so to help children in Uganda, the message was shown on the Vim startup screen, millions of Euros were raised, this makes Vim stand out from the others to me, I'd like to be one of those who can contribute, even though Vim is not easy for beginners to start, and even more effort to be as a contributor.
+
+![](./../blogs/vim-uganda.png)
+
+### configuration
+there is even a language for Vim configuration: VimScript, then Lua joined the party after `neovim` came out, every Vim user seem to have their own configuration, plugins, themes, key mappings, long and complex configuration files, I understand some developers love to customize their tools. this is a screenshot of my Vim.
+
+![](./../blogs/my-vim.png)
+
+### productivity
+The learning curve of Vim is steep, it takes a lot of time to remember and try every shortcut, eg, delete text until next space, delete the next 3 lines, besides the shortcuts came from the other plugins, but once you are familiar with them, coding in Vim is super smooth, everything fuse into muscle memory, the fact that you don't need to touch your mouse let you keep focus on the screen.
+
+### lightweight
+Vim is the built-in editor in linux system, if you work in ops industry, there would be tons of time that you ssh into a remote server and commit changes in the server configuration files, you can start Vim in milliseconds and finish your work.
+
+## I'm tired
+In the last couple of years, I spent a lot of time to improve my own Vim configuration, tweak plugins, explore new themes, learn VimScript then Lua, many different Vim plugin management libraries, then I discovered that `vscode` can pretty much do the same things as Vim, but doesn't require much effort to setup, if you do enjoy configure things by your own, you can still do it in vscode, it's more like `convention over configuration`, the way of installing plugins in vscode is way easier than in Vim, on top of that, vscode is also lightweight and fast.
+
+Another reason is JS/TS is the main programming language in my current team, vscode naturally supports those languages rather well that I don't really need to spend much time on making it good enough for my day-to-day work. I've seen a lot of the "dynamic language" programmers uses Vim, but few to none Java or C# user use it, Vim is just hard to provide the same assistance that other "professional" IDE does for some particular programming languages.
+
+another feature that Vim doesn't do well is debugging, step into/out and view real-time variable values sometimes is so efficient, Vim can do it with the help of some plugins but not that well compare with Vim, not to mention Intellij and Visual Studio.
+
+### Vim Plugin in vscode?
+I have to say I miss some basic amazing features of Vim, what could make Vim user adopt Vscode less painful is [Vim plugin of vscode](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim), it doesn't really give you everything that Vim has, and it's a bit buggy sometimes(especially with undo history), but it's at least better than nothing and definitely helps with my workflow. at the same time I'm getting myself familiar with Vscode shortcuts, so I can expect this plugin will be disabled some day in the future.
+
+There is no "best" IDEs in the world, it's purely a matter of personal preference, so far I'm enjoying vscode. and I appreciate the joy that Vim ever brought to me.
+
+Adios Vim, Hola Vscode.
