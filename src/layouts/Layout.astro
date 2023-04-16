@@ -2,9 +2,11 @@
 export interface Props {
   title: string;
   pageTab: string;
+  metaKeywords: string;
+  metaDescription: string;
 }
 
-const { title, pageTab } = Astro.props;
+const { title, pageTab, metaKeywords, metaDescription = "" } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -21,8 +23,11 @@ import Footer from "../components/Footer.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <meta name="author" content="Edward Zhou" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content={metaKeywords} />
+    <meta name="description" content={metaDescription} />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
     <title>{title}</title>
   </head>
   <body class="dark:bg-slate-900 dark:text-slate-400">

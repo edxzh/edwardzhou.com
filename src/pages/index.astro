@@ -17,9 +17,16 @@ const featured_blog = allPosts.filter((post) => post.frontmatter.featured)[0];
 
 const pageTitle = "Edward Zhou";
 const pageTab = "home";
+const metaKeywords = "Edward Zhou, blog";
+const metaDescription = "Edward Zhou personal website";
 ---
 
-<Layout title={pageTitle} pageTab={pageTab}>
+<Layout
+  title={pageTitle}
+  pageTab={pageTab}
+  metaKeywords={metaKeywords}
+  metaDescription={metaDescription}
+>
   <!-- featured blog section -->
   <FeatureBlog blog={featured_blog} />
   <!-- Subscribe email section -->

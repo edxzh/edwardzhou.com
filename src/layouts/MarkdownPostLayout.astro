@@ -3,25 +3,30 @@ type Image = {
   url: string;
   alt: string;
 };
-interface Props {
-  title: string;
-  publishDate: string;
-  description: string;
-  image: Image;
-  tags: string[];
-}
 import TagNav from "@components/posts/TagNav.astro";
 import Layout from "./Layout.astro";
 import "../styles/mdx.css";
 
-const { title, publishDate, description, image, tags, timeToRead } =
-  Astro.props.frontmatter;
+const {
+  title,
+  publishDate,
+  description,
+  image,
+  tags,
+  timeToRead,
+  metaKeywords,
+} = Astro.props.frontmatter;
 
 const { host, protocol } = Astro.url;
 const imageUrl = `${protocol}//${host}/${image.url}`;
 ---
 
-<Layout title={title} pageTab="posts">
+<Layout
+  title={title}
+  pageTab="posts"
+  metaKeywords={metaKeywords}
+  metaDescription={description}
+>
   <TagNav uniqueTags={tags} />
   <section
     class="w-11/12 px-8 mx-auto border lg:w-1/2 border-slate-700 dark:ring-1 dark:ring-white/10 dark:ring-inset"
