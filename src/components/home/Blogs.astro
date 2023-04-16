@@ -13,10 +13,12 @@ const { blogs } = Astro.props;
     {
       blogs.map((post: Post) => (
         <section class="border-0 lg:mb-10 lg:border border-slate-700">
-          <img
-            src={post.frontmatter.image.url}
-            alt={post.frontmatter.image.alt}
-          />
+          <a href={post.url}>
+            <img
+              src={post.frontmatter.image.url}
+              alt={post.frontmatter.image.alt}
+            />
+          </a>
           <div class="px-4 pt-4 text-sm text-slate-700 dark:text-slate-400">
             <time class="mr-1">{post.frontmatter.publishDate}</time>
             <span class="mr-1 relative bottom-0.5 inline-block w-0.5 h-0.5 rounded-full bg-slate-400 dark:bg-slate-400" />
