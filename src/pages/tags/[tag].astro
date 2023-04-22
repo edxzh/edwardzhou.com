@@ -1,0 +1,69 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "../../styles/global.css";
+import BlogPost from "@components/BlogPost.astro";
+import TagNav from "@components/posts/TagNav.astro";
+import type { Post } from "@type";
+
+interface Props {
+  posts: [Post];
+  uniqueTags: string[];
+}
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.mdx");
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags.includes(tag)
+    );
+
+    return {
+      params: { tag },
+      props: { posts: filteredPosts, uniqueTags },
+    };
+  });
+}
+
+const truncate = (str: string, n: number, useWordBoundary: boolean) => {
+  if (str.length <= n) {
+    return str;
+  }
+  const subString = str.slice(0, n - 1);
+  return (
+    (useWordBoundary
+      ? subString.slice(0, subString.lastIndexOf(" "))
+      : subString) + "..."
+  );
+};
+
+const { tag } = Astro.params;
+const { posts, uniqueTags } = Astro.props;
+---
+
+<Layout
+  title={tag as string}
+  pageTab="posts"
+  metaKeywords={tag!}
+  metaDescription={`blogs about ${tag}`}
+>
+  <TagNav uniqueTags={uniqueTags} tag={tag} />
+
+  <div class="w-3/4 lg:w-1/2 mx-auto lg:grid lg:grid-cols-2 lg:gap-4">
+    {
+      posts.map((post: Post) => (
+        <BlogPost
+          url={post.url}
+          title={post.frontmatter.title}
+          description={truncate(post.frontmatter.description, 100, true)}
+          publishDate={post.frontmatter.publishDate}
+          timeToRead={post.frontmatter.timeToRead}
+          imgSrc={`../${post.frontmatter.image.url}`}
+          imgAlt={post.frontmatter.image.alt}
+        />
+      ))
+    }
+  </div>
+</Layout>
