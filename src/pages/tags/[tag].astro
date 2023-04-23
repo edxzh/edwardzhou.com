@@ -60,7 +60,7 @@ const { posts, uniqueTags } = Astro.props;
           description={truncate(post.frontmatter.description, 100, true)}
           publishDate={post.frontmatter.publishDate}
           timeToRead={post.frontmatter.timeToRead}
-          imgSrc={`../${post.frontmatter.image.url}`}
+          imgSrc={`../../${post.frontmatter.image.url}`}
           imgAlt={post.frontmatter.image.alt}
         />
       ))
