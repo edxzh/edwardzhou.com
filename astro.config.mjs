@@ -12,6 +12,7 @@ import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
 import rehypeMinifyHtml from "rehype";
 import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,6 +27,12 @@ export default defineConfig({
       rehypePlugins: [rehypeMinifyHtml, rehypeHeadingIds],
       remarkRehype: {
         footnoteLabel: "Footnotes",
+      },
+    }),
+    partytown({
+      // Adds dataLayer.push as a forwarding-event.
+      config: {
+        forward: ["dataLayer.push"],
       },
     }),
   ],

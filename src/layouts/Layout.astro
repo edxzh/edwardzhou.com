@@ -21,6 +21,19 @@ import Footer from "../components/Footer.astro";
   lang="en"
 >
   <head>
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-EZP9HWW4ZD");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Edward Zhou" />
