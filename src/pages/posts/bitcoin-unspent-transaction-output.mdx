@@ -24,11 +24,9 @@ export const components = {
   a: A,
 };
 
-Bitcoin is a decentralized digital currency that is powered by a peer-to-peer network of computers. Transactions in the Bitcoin network are verified by a distributed network of nodes and recorded in a public ledger called the blockchain. One of the key components of Bitcoin transactions is Unspent Transaction Outputs (UTXOs).
+Bitcoin and Bitcoin Blockchain are different things, to put it simple, Bitcoin(BTC) is the native currency on a blockchain, which is Bitcoin Blockchain. have you ever wondered how does people transfer bitcoins from one address to another address? in this post, we are going to talk about the foundation of Bitcoin blockchain transactions: UTXOs.
 
-In this blog post, we will explain what UTXOs are, how they work, and why they are important for the functioning of the Bitcoin network.
-
-What are UTXOs?
+## What are UTXOs?
 
 UTXOs are the unspent outputs of a Bitcoin transaction. When a Bitcoin transaction is made, it creates an output that is locked with a specific script that defines the conditions under which the output can be spent. These outputs become UTXOs that can be spent in a future transaction.
 
@@ -38,22 +36,58 @@ When Bob wants to spend the 1 BTC, he must include the UTXO as an input in his t
 
 When the transaction is validated by the Bitcoin network, the UTXO is consumed and becomes "spent." The remaining BTC is sent back to a new UTXO, which represents the change from the transaction.
 
-How do UTXOs work?
+## How do UTXOs work?
 
-UTXOs play a critical role in the Bitcoin network by enabling the decentralized verification of transactions. Each UTXO represents a specific amount of bitcoin that is owned by a particular wallet. When a transaction is made, the UTXOs that are used as inputs are consumed and new UTXOs are created as outputs.
+In Bitcoin Blockchain, each UTXO represents a specific amount of bitcoin that is owned by a particular wallet. when a transaction is made, the UTXOs that are used as inputs are consumed and new UTXOs are created as outputs.
 
-Each UTXO is uniquely identified by a transaction ID and an output index. The transaction ID is a hash of the transaction that created the UTXO, and the output index is a number that identifies the specific output within the transaction.
+Each UTXO is uniquely identified by a transaction ID and an output index. the transaction ID is a hash of the transaction that created the UTXO, and the output index is a number that identifies the specific output within the transaction. here is an example of Bitcoin Blockchain transaction.
+``` json
+{
+  "txid": "f5a5d5a3486db7d6c405d6df05f6c0e6db27c8e3aa1f9c2d7f8b108a0a7aefc3",
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "c259f75e12c2d2f1d0317fa38c9e768f2a90a83b6c97fae57d0910aa7ec935b9",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "3045022100d42531fb69c67f3dd0290c26d58a3f1fcf6a0dbedec7e6d14634d944f35e558902206be9d9c3f3e2eddd8f870e432f97b6a317d8185c222eab3425f1489c5815d5b[ALL] 02f65b1f098ed75d79e2c81df1b6971d7c06333e372b7867e8e07a0f7c784d65dd",
+        "hex": "483045022100d42531fb69c67f3dd0290c26d58a3f1fcf6a0dbedec7e6d14634d944f35e558902206be9d9c3f3e2eddd8f870e432f97b6a317d8185c222eab3425f1489c5815d5b012102f65b1f098ed75d79e2c81df1b6971d7c06333e372b7867e8e07a0f7c784d65dd"
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.009,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 499b08016c21441e79ab0c195f02d91f9c854bb9 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914499b08016c21441e79ab0c195f02d91f9c854bb988ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN"
+        ]
+      }
+    }
+  ]
+}
+```
+
+This transaction has one input (or "vin") and one output (or "vout"). the input comes from a previous transaction with the transaction ID "c259f75e12c2d2f1d0317fa38c9e768f2a90a83b6c97fae57d0910aa7ec935b9" and output index 0. The output sends 0.009 BTC to the address "1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN".
+the transaction also includes a digital signature ("scriptSig") that proves the sender of the transaction has the right to spend the input funds
 
 When a node on the Bitcoin network receives a new transaction, it first checks that all of the inputs are valid UTXOs that have not been spent in any previous transaction. If the inputs are valid, the node checks that the total amount of bitcoin being spent does not exceed the total amount of bitcoin in the UTXOs being consumed.
 
 If the transaction is valid, it is added to the mempool, which is a list of pending transactions that are waiting to be confirmed by the network. When a miner creates a new block, they include a set of transactions from the mempool and add them to the blockchain.
 
-Why are UTXOs important?
+## Why are UTXOs important?
 
-UTXOs are a crucial component of the Bitcoin network because they enable the decentralized verification of transactions. By using UTXOs to track the ownership of bitcoin, the Bitcoin network can maintain a secure and decentralized ledger of all transactions without the need for a central authority.
+UTXOs enable the decentralized verification of transactions. by using UTXOs to track the ownership of bitcoin, the Bitcoin network can maintain a secure and decentralized ledger of all transactions without the need for a central authority.
 
 Because UTXOs are discrete units of bitcoin that can only be spent once, they provide a transparent and tamper-proof record of ownership that prevents double-spending and ensures the integrity of the Bitcoin network.
 
-Conclusion
+## Conclusion
 
 In conclusion, UTXOs are a critical component of the Bitcoin network that enable the decentralized verification of transactions. By using UTXOs to track the ownership of bitcoin, the Bitcoin network can maintain a secure and decentralized ledger of all transactions without the need for a central authority. Understanding how UTXOs work is important for anyone who wants to understand the inner workings of the Bitcoin network and the blockchain technology that powers it.
