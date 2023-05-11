@@ -14,13 +14,11 @@ metaKeywords: "Blockchain, bitcoin, utxo"
 
 import Blockquote from "@components/mdx/Blockquote.astro";
 import Pre from "@components/mdx/Pre.astro";
-import Code from "@components/mdx/Code.astro";
 import A from "@components/mdx/A.astro";
 
 export const components = {
   blockquote: Blockquote,
   pre: Pre,
-  code: Code,
   a: A,
 };
 
@@ -41,7 +39,8 @@ When the transaction is validated by the Bitcoin network, the UTXO is consumed a
 In Bitcoin Blockchain, each UTXO represents a specific amount of bitcoin that is owned by a particular wallet. when a transaction is made, the UTXOs that are used as inputs are consumed and new UTXOs are created as outputs.
 
 Each UTXO is uniquely identified by a transaction ID and an output index. the transaction ID is a hash of the transaction that created the UTXO, and the output index is a number that identifies the specific output within the transaction. here is an example of Bitcoin Blockchain transaction.
-``` json
+
+```json
 {
   "txid": "f5a5d5a3486db7d6c405d6df05f6c0e6db27c8e3aa1f9c2d7f8b108a0a7aefc3",
   "version": 1,
@@ -66,17 +65,14 @@ Each UTXO is uniquely identified by a transaction ID and an output index. the tr
         "hex": "76a914499b08016c21441e79ab0c195f02d91f9c854bb988ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
-        "addresses": [
-          "1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN"
-        ]
+        "addresses": ["1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN"]
       }
     }
   ]
 }
 ```
 
-This transaction has one input (or "vin") and one output (or "vout"). the input comes from a previous transaction with the transaction ID "c259f75e12c2d2f1d0317fa38c9e768f2a90a83b6c97fae57d0910aa7ec935b9" and output index 0. The output sends 0.009 BTC to the address "1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN".
-the transaction also includes a digital signature ("scriptSig") that proves the sender of the transaction has the right to spend the input funds
+This transaction has one input (or "vin") and one output (or "vout"). the input comes from a previous transaction with the transaction ID "c259f75e12c2d2f1d0317fa38c9e768f2a90a83b6c97fae57d0910aa7ec935b9" and output index 0. The output sends 0.009 BTC to the address "1FqCwuYuRYjKp4UW21MriRdYrBbTeRtxaN". the transaction also includes a digital signature ("scriptSig") that proves the sender of the transaction has the right to spend the input funds
 
 When a node on the Bitcoin network receives a new transaction, it first checks that all of the inputs are valid UTXOs that have not been spent in any previous transaction. If the inputs are valid, the node checks that the total amount of bitcoin being spent does not exceed the total amount of bitcoin in the UTXOs being consumed.
 

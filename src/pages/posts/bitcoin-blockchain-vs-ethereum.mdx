@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Bitcoin Blockchain VS Ethereum"
-publishDate: "2023-04-29"
-timeToRead: "8 mins"
+publishDate: "2023-05-09"
+timeToRead: "6 mins"
 description: "Bitcoin and Ethereum are two of the most well-known blockchain platforms, let us take a look at the difference between them"
 featured: false
 image:
@@ -14,13 +14,11 @@ metaKeywords: "Blockchain, bitcoin, ethereum"
 
 import Blockquote from "@components/mdx/Blockquote.astro";
 import Pre from "@components/mdx/Pre.astro";
-import Code from "@components/mdx/Code.astro";
 import A from "@components/mdx/A.astro";
 
 export const components = {
   blockquote: Blockquote,
   pre: Pre,
-  code: Code,
   a: A,
 };
 
@@ -34,9 +32,21 @@ Ethereum was launched in 2015 by Vitalik Buterin, and its primary purpose was to
 
 ### Blockchain Type: Transaction-based VS Account-based
 
-The Bitcoin blockchain is a `transaction-based` blockchain, meaning that transactions are grouped into blocks and added to the blockchain in a linear, chronological sequence. Each block contains a set of transactions that have been validated by the network's nodes, in order to know how many bitcoins are left for a particular address, the system has to sum all the transactions that this address was involved, with `UTXO`(Unspent Transaction Output) model, there are many public blogs that talks about this, I highly recommend [this video](https://www.youtube.com/watch?v=zGDTt9Q3vyM) by `Gary Gensler`
+The Bitcoin blockchain is a `transaction-based` blockchain, meaning that transactions are grouped into blocks and added to the blockchain in a linear, chronological sequence. Each block contains a set of transactions that have been validated by the network's nodes, in order to know how many bitcoins are left for a particular address, the system has to sum all the transactions that this address was involved, with `UTXO`(Unspent Transaction Output) model, there are many public blogs that talks about this, I highly recommend [this video](https://www.youtube.com/watch?v=zGDTt9Q3vyM) by `Gary Gensler`, I have [another blog](https://edwardzhou.com/posts/bitcoin-unspent-transaction-output) that explains UTXOs in Bitcoin Blockchain.
 
-Ethereum's blockchain is `account-based`, means every address has a balance of ETH, which can be transferred to other accounts on the network. it provides a simpler and more intuitive model for users to understand. users can easily track their balances and transactions by checking their account balances, similar to how they would do with a traditional bank account. additionally, account-based blockchains are well-suited for implementing complex financial applications, such as decentralized exchanges, lending platforms, and other financial services.
+Ethereum's blockchain is `account-based`, means every address has a balance of ETH, which can be transferred to other accounts on the network. it provides a simpler and more intuitive model for users to understand. users can easily track their balances and transactions by checking their account balances, similar to how they would do with a traditional bank account. additionally, account-based blockchains are well-suited for implementing complex financial applications, such as decentralized exchanges, lending platforms, and other financial services. here is an example transaction of Ethereum.
+
+```json
+{
+  "from": "0x1234567890123456789012345678901234567890",
+  "to": "0x0987654321098765432109876543210987654321",
+  "gas": "0x76c0", // The gas limit for the transaction
+  "gasPrice": "0x9184e72a000", // The price of gas in Wei
+  "value": "0x9184e72a", // The amount of Ether being transferred in Wei
+  "nonce": "0x1", // A unique identifier for the transaction
+  "data": "0x1234567890" // Optional data payload for the transaction
+}
+```
 
 ### Consensus Algorithm
 
