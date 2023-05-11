@@ -4,6 +4,11 @@ interface Props {
   tag?: string;
 }
 const { uniqueTags, tag = "" } = Astro.props;
+
+const tagUrl = (url: string) => {
+  const prod_url = new URL(url, Astro.site);
+  return prod_url.toString();
+};
 ---
 
 <nav class="bg-white dark:bg-gray-900 w-3/4 lg:w-1/2 mx-auto lg:pb-4">
@@ -16,7 +21,7 @@ const { uniqueTags, tag = "" } = Astro.props;
           uniqueTags.map((t) => (
             <li>
               <a
-                href={`../tags/${t}`}
+                href={tagUrl(`tags/${t}`)}
                 class={t === tag ? "highlight_tag" : "normal_tag"}
                 aria-current="page"
               >
