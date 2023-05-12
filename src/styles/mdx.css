@@ -28,3 +28,7 @@ th {
 .blog-body h3 {
   @apply mb-2 text-xl font-medium leading-8;
 }
+
+p code {
+  @apply text-red-600 font-semibold tracking-normal border border-slate-200 rounded px-1 bg-slate-50;
+}
