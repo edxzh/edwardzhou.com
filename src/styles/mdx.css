@@ -29,6 +29,14 @@ th {
   @apply mb-2 text-xl font-medium leading-8;
 }
 
-p code {
+.blog-body p code {
   @apply text-red-600 font-semibold tracking-normal border border-slate-200 rounded px-1 bg-slate-50;
+}
+
+.blog-body ul {
+  @apply mb-4;
+}
+
+.blog-body ul li {
+  @apply list-disc ml-4;
 }

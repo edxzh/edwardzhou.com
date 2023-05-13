@@ -1,0 +1,10 @@
+---
+const { src, alt } = Astro.props;
+
+const imgUrl = (url: string) => {
+  const prod_url = new URL(`${url}`, Astro.site);
+  return prod_url.toString();
+};
+---
+
+<img src={imgUrl(src)} alt={alt} />
